@@ -1,0 +1,17 @@
+# How to run:
+
+version: '2'
+services:
+  fdlweb:
+    container_name: fdlweb
+    build:
+      context: .
+      dockerfile: Dockerfile_web
+    image: fdl-web:latest
+    ports:
+      - "6010:80"
+    networks:
+      - fdl-network
+
+networks:
+    fdl-network:

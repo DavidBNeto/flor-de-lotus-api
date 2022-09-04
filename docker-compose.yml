@@ -1,0 +1,33 @@
+version: "2"
+
+services:
+  fdldb:
+    container_name: fdldb
+    image: mongo:latest
+    ports:
+      - 6002:27017
+    volumes:
+      - /vol/florDeLotus/db:/data/db
+    networks:
+      - fdl-network
+
+  fdlapi:
+    container_name: fdlapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: flor-de-lotus:latest
+    depends_on:
+      - "fdldb"
+    expose:
+      - "6001"
+    ports:
+      - "6001:3000"
+    environment:
+      - NODE_ENV=homolog
+    command: bash -c "npm run start"
+    networks:
+      - fdl-network
+
+networks:
+  fdl-network:

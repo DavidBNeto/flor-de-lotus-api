@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  fdldb:
+    container_name: fdldb
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - /vol/ages_flor_de_lotus/db:/data/db
+#     networks:
+#       - fdl-network
+
+# networks:
+#   fdl-network:
