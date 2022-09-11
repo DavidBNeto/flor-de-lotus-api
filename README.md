@@ -52,6 +52,13 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Sonarqube
+Para realizar uma varredura no código, a ferramenta do solarqube pode ser utilizada, para isso você pode executar os seguintes passos:
+
+Baixar e instalar uma versão do Sonarqube deste [link](https://docs.sonarqube.org/latest/setup/get-started-2-minutes/)
+
+Após isso, seguir os passos disponíveis no guia da própria Sonarqube.
+
 ## Test
 
 ```bash
