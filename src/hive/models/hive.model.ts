@@ -4,5 +4,6 @@ export class HiveModel {
     public x: string,
     public y: string,
     public ip: string,
+    public status: boolean,
   ) {}
 }
