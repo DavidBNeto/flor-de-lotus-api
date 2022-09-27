@@ -28,7 +28,6 @@ export class AuthService {
 
   async validateUser(payload: JwtPayload): Promise<UserModel> {
     try {
-      // const user = await this.userService.findById(payload.pin.trim());
       const hash = crypto
         .createHmac('sha256', payload.pin)
         .update('The cake is a lie')

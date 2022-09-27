@@ -11,10 +11,6 @@ export class AuthController {
     try {
       const { user } = body;
 
-      // if (!user.id) {
-      //   return res.status(400).json({ message: 'Informe o ID!' });
-      // }
-
       if (!user.pin) {
         return res.status(400).json({ message: 'Informe o PIN!' });
       }
