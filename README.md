@@ -33,6 +33,9 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Pré-requisito
+- [Node.js version 16.17.0](https://nodejs.org/en/)
+
 ## Installation
 
 ```bash
@@ -51,6 +54,13 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+## Sonarqube
+Para realizar uma varredura no código, a ferramenta do solarqube pode ser utilizada, para isso você pode executar os seguintes passos:
+
+Baixar e instalar uma versão do Sonarqube deste [link](https://docs.sonarqube.org/latest/setup/get-started-2-minutes/)
+
+Após isso, seguir os passos disponíveis no guia da própria Sonarqube.
 
 ## Test
 
