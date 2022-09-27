@@ -11,6 +11,10 @@ export const HiveSchema = new mongoose.Schema({
   y: {
     type: String,
   },
+  status: {
+    type: Boolean,
+    default: true,
+  },
   createdAt: {
     type: Date,
     default: Date.now,

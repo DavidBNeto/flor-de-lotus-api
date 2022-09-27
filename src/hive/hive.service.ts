@@ -13,7 +13,7 @@ export class HiveService {
   }
   async update(id: Number, model: HiveModel): Promise<HiveModel> {
     const hiveUpdate = await this.model.findOne({ _id: id }).exec();
-    const { x, y, ip } = model;
+    const { x, y, ip, status } = model;
     if (x) {
       hiveUpdate.x = x;
     }
@@ -22,6 +22,9 @@ export class HiveService {
     }
     if (ip) {
       hiveUpdate.ip = ip;
+    }
+    if (status) {
+      hiveUpdate.status = status;
     }
 
     return await hiveUpdate.save();
