@@ -1,10 +1,12 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-  <img src="https://raw.githubusercontent.com/khaosdoctor/blog-assets/master/images/2022/06/10b88c68-typescript-logo.png" width="320" alt="Ts logo" />
-  <img src="https://www.mundojs.com.br/wp-content/uploads/2020/02/prettier.png" width="320" alt="prettier logo" />
-  <img src="https://img.mandic.com.br/blog/2015/01/homepage-docker-logo.png" width="320" alt="docker logo" />
-  <img src="https://www.ambientelivre.com.br/media/k2/items/cache/e9432fccf28a953514f077b86e5e657a_L.jpg" width="320" alt="mongo logo" />
-  <img src="https://miro.medium.com/max/1400/1*EiKXXsymsyfZ5X46uFG3Xw.png" width="320" alt="npm logo" />
+  <a href="http://nestjs.com/" target="blank"><img src="./assets/nestjs_logo.png" width="320" alt="Nest Logo" /></a>
+  <img src="./assets/typescript-logo.png" width="285" alt="Ts logo" />
+  <img src="./assets/prettier_logo.png" width="320" alt="prettier logo" />  
+  <img src="./assets/mongodb_logo.jpg" width="285" alt="mongo logo" />
+  <img src="./assets/node_npm%20_logo.png" width="600" alt="npm logo" />
+</p>
+<p align="center">
+<img src="./assets/homepage-docker-logo.png" width="320" alt="docker logo" />
 </p>
 
 [travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
@@ -29,9 +31,12 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Descrição
+A estrutura deste programa pode ser vista na imagem abaixo.
+<p align="center">
+  <img src="./assets/arquitetura.jpg" alt="arquitetura" />
+</p>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Pré-requisito
 - [Node.js version 16.17.0](https://nodejs.org/en/)
