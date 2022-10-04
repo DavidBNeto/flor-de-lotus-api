@@ -11,11 +11,11 @@ export class UserController {
   async create(@Body() body, @Res() res) {
     const model: UserModel = body.user;
     try {
-      
+
       if (!model) {
         return res.status(400).json({ message: 'Usuário inválido!' });
       }
-      
+
       const { access_lvl, pin } = model;
 
       if (access_lvl && typesRole.indexOf(access_lvl) < 0) {
@@ -50,6 +50,18 @@ export class UserController {
       return res
         .status(400)
         .json({ message: 'Ops! Ocorreu um erro ao buscar os usuários', error });
+    }
+  }
+
+  @Get()
+  async find(user_id: string, @Res() res): Promise<UserModel[]> {
+    try {
+      const user = await this.service.findById(user_id);
+      return res.status(200).json(user);
+    } catch (error) {
+      return res
+        .status(400)
+        .json({ message: 'Ops! Ocorreu um erro ao buscar o usuário', error });
     }
   }
 }
