@@ -14,7 +14,7 @@
 [linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
 [linux-url]: https://travis-ci.org/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
+  <p align="center">Uma estrutura progressiva do <a href="http://nodejs.org" target="blank">Node.js</a>  para criar aplicativos do lado do servidor eficientes e escaláveis, fortemente inspirados no <a href="https://angular.io" target="blank">Angular</a>.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
@@ -36,22 +36,22 @@ A estrutura deste programa pode ser vista na imagem abaixo.
 <p align="center">
   <img src="./assets/arquitetura.jpg" alt="arquitetura" />
 </p>
-Imagen desenvolvida por <a href="mailto:miguelzanela89@gmail.com?">Miguel Zanela</a>
+Imagem desenvolvida por <a href="mailto:miguelzanela89@gmail.com?">Miguel Zanela</a>
 
 
 ## Pré-requisito
-- [Node.js version 16.17.0](https://nodejs.org/en/)
+- [Node.js versão 16.17.0](https://nodejs.org/en/)
 - [Typescript] "3.4.5" ou maior (https://www.typescriptlang.org)
 - [NestJS] "6.0" ou maior (https://nestjs.com)
 - [MongoDB] "3.2.7" ou maior (https://www.mongodb.com)
 
-## Installation
+## Instalação
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+## Rodando o Aplicativo
 
 ```bash
 # development
@@ -71,29 +71,29 @@ Baixar e instalar uma versão do Sonarqube deste [link](https://docs.sonarqube.o
 
 Após isso, seguir os passos disponíveis no guia da própria Sonarqube.
 
-## Test
+## Testes
 
 ```bash
-# unit tests
+# testes unitários
 $ npm run test
 
-# e2e tests
+# testes e2e 
 $ npm run test:e2e
 
-# test coverage
+# cobertura de teste
 $ npm run test:cov
 ```
 
-## Support
+## Suporte
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Nest é um projeto de código aberto licenciado pelo MIT. Pode crescer graças aos patrocinadores e suporte dos incríveis apoiadores. Se você gostaria de entrar no time, por favor [leia mais aqui](https://docs.nestjs.com/support).
 
-## Stay in touch
+## Contatos
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
+- Autor - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Página da Web - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
 
-## License
+## Licença
 
-  Nest is [MIT licensed](LICENSE).
+  Nest é [licenciado pelo MIT](LICENSE).
