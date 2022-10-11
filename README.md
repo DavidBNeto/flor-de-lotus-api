@@ -36,6 +36,7 @@ A estrutura deste programa pode ser vista na imagem abaixo.
 <p align="center">
   <img src="./assets/arquitetura.jpg" alt="arquitetura" />
 </p>
+Imagen desenvolvida por <a href="mailto:miguelzanela89@gmail.com?">Miguel Zanela</a>
 
 
 ## Pré-requisito
