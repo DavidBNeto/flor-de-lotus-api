@@ -1,4 +1,4 @@
-import {Get, Controller, Post, Body, Res, Param, Put, Catch, Delete} from '@nestjs/common';
+import {Get, Controller, Post, Body, Res, Param, Put, Delete} from '@nestjs/common';
 import {PlantService} from './plant.service';
 import {Plantmodel} from './model/plants.model';
 

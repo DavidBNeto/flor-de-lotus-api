@@ -11,18 +11,18 @@ export class PlantationService {
 
   async create(model: PlantationModel): Promise<PlantationModel> {
     const data = new this.model(model);
-    return await data.save();
+    return data.save();
   }
 
   async findAll(): Promise<PlantationModel[]> {
-    return await this.model.find().exec();
+    return this.model.find().exec();
   }
 
   async findById(id: string): Promise<PlantationModel> {
-    return await this.model.findOne({ _id: id }).exec();
+    return this.model.findOne({ _id: id }).exec();
   }
 
-  async update(id: Number, model: PlantationModel): Promise<PlantationModel> {
+  async update(id: number, model: PlantationModel): Promise<PlantationModel> {
     const plantationUpdate = await this.model.findOne({ _id: id }).exec();
     const { coordenadas, hive, cultures } = model;
     if (coordenadas) {
@@ -35,6 +35,6 @@ export class PlantationService {
       plantationUpdate.cultures = cultures;
     }
 
-    return await plantationUpdate.save();
+    return plantationUpdate.save();
   }
 }

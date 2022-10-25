@@ -1,4 +1,4 @@
-import { Get, Controller, Post, Body, Res, Param, Put } from '@nestjs/common';
+import { Get, Controller, Post, Body, Res, Param} from '@nestjs/common';
 import { MapService } from './map.service';
 import { MapModel } from './models/map.model';
 
