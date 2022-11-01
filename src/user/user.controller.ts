@@ -1,4 +1,4 @@
-import { Get, Controller, Post, Body, Res} from '@nestjs/common';
+import {Get, Controller, Post, Body, Res, Param, Put, Delete} from '@nestjs/common';
 import { UserService } from './user.service';
 import { UserModel } from './models/user.model';
 import { typesRole } from './schemas/user.schema';
@@ -6,6 +6,18 @@ import { typesRole } from './schemas/user.schema';
 @Controller('user')
 export class UserController {
   constructor(private readonly service: UserService) {}
+
+  @Delete()
+  async delete(userId: string, @Res() res): Promise<UserModel> {
+    try {
+      const user = await this.service.deleteById(userId);
+      return res.status(200).json(user);
+    } catch (error) {
+      return res
+          .status(400)
+          .json({ message: 'Ops! Ocorreu um erro ao deletar o usuário', error });
+    }
+  }
 
   @Post()
   async create(@Body() body, @Res() res) {
@@ -54,9 +66,9 @@ export class UserController {
   }
 
   @Get()
-  async find(user_id: string, @Res() res): Promise<UserModel[]> {
+  async find(userId: string, @Res() res): Promise<UserModel[]> {
     try {
-      const user = await this.service.findById(user_id);
+      const user = await this.service.findById(userId);
       return res.status(200).json(user);
     } catch (error) {
       return res

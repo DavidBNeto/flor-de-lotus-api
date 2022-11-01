@@ -8,6 +8,10 @@ import * as crypto from 'crypto';
 export class UserService {
   constructor(@InjectModel('User') private readonly model: Model<UserModel>) {}
 
+  async deleteById(id: string): Promise<UserModel> {
+    return this.model.findByIdAndDelete(id);
+  }
+
   async create(model: UserModel): Promise<UserModel> {
     const hash = crypto
       .createHmac('sha256', model.pin)
