@@ -1,4 +1,4 @@
-export class Plantmodel{
+export class PlantModel {
     constructor(
         public plant: string,
         public water_amt: number,
