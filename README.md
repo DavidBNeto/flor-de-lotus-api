@@ -41,9 +41,9 @@ Imagem desenvolvida por <a href="mailto:miguelzanela89@gmail.com?">Miguel Zanela
 
 ## Pré-requisito
 - [Node.js versão 16.17.0](https://nodejs.org/en/)
-- [Typescript] "3.4.5" ou maior (https://www.typescriptlang.org)
-- [NestJS] "6.0" ou maior (https://nestjs.com)
-- [MongoDB] "3.2.7" ou maior (https://www.mongodb.com)
+- [Typescript versão 3.4.5 ou maior](https://www.typescriptlang.org)
+- [NestJS versão 6.0 ou maior](https://nestjs.com)
+- [MongoDB versão 3.2.7 ou maior](https://www.mongodb.com)
 
 ## Instalação
 
