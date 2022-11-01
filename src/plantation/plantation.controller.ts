@@ -25,7 +25,7 @@ export class PlantationController {
   }
 
   @Put(':id')
-  async update(@Param('id') id: Number, @Body() body, @Res() res) {
+  async update(@Param('id') id: number, @Body() body, @Res() res) {
     const model: PlantationModel = body;
     try {
       if (!model) {

@@ -8,6 +8,10 @@ import * as crypto from 'crypto';
 export class UserService {
   constructor(@InjectModel('User') private readonly model: Model<UserModel>) {}
 
+  async deleteById(id: string): Promise<UserModel> {
+    return this.model.findByIdAndDelete(id);
+  }
+
   async create(model: UserModel): Promise<UserModel> {
     const hash = crypto
       .createHmac('sha256', model.pin)
@@ -15,18 +19,18 @@ export class UserService {
       .digest('hex');
     model.pin = hash;
     const data = new this.model(model);
-    return await data.save();
+    return data.save();
   }
 
   async findAll(): Promise<UserModel[]> {
-    return await this.model.find().exec();
+    return this.model.find().exec();
   }
 
   async findById(id: string): Promise<UserModel> {
-    return await this.model.findOne({ _id: id }).exec();
+    return this.model.findOne({ _id: id }).exec();
   }
 
   async findByPIN(pin: string): Promise<UserModel> {
-    return await this.model.findOne({ pin: pin }).exec();
+    return this.model.findOne({ pin: pin }).exec();
   }
 }

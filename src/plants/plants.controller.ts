@@ -1,6 +1,6 @@
-import {Get, Controller, Post, Body, Res, Param, Put, Catch, Delete} from '@nestjs/common';
+import {Get, Controller, Post, Body, Res, Param, Put, Delete} from '@nestjs/common';
 import {PlantService} from './plant.service';
-import {Plantmodel} from './model/plants.model';
+import {PlantModel} from './model/plants.model';
 
 
 @Controller('plant')
@@ -9,7 +9,7 @@ export class PlantController{
 
     @Post()
     async Create(@Body() body, @Res() res){
-        const model: Plantmodel = body;
+        const model: PlantModel = body;
 
         try{
             if(!model) {
@@ -24,7 +24,7 @@ export class PlantController{
     }
 
     @Get()
-    async findAll(@Res() res): Promise<Plantmodel[]>{
+    async findAll(@Res() res): Promise<PlantModel[]>{
         try{            
             const plants = await this.service.findAll();
             return res.status(200).json(plants);
@@ -34,19 +34,19 @@ export class PlantController{
     }
     
     @Get(":id")
-    async findOne(@Res() res, @Param("id") id: string,): Promise<Plantmodel>{
+    async findOne(@Res() res, @Param("id") id: string,): Promise<PlantModel>{
         try{
             const plant = await this.service.findById(id);
             return res.status(200).json(plant);
-        } catch (error){
+        } catch (error) {
             return res.status(400).json({message: 'Ocorreu um erro ao buscar a planta', error});
-        }        
+        }
     }
 
-     @Put(":id/edit") 
-     async update(@Param("id") id: string, @Res() res): Promise<Plantmodel>{         
-         return this.service.updatePlant(id);                                                
-    }  
+     @Put(":id/edit")
+     async update(@Param("id") id: string, @Body() plant: PlantModel, @Res() res): Promise<PlantModel>{
+         return this.service.updatePlant(id, plant);
+    }
 
     @Delete(":id/delete")
     async delete( @Param("id") id: string): Promise<any>{        

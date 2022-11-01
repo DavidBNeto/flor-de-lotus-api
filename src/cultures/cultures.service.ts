@@ -11,22 +11,22 @@ export class CulturesService {
 
   async create(model: CulturesModel): Promise<CulturesModel> {
     const data = new this.model(model);
-    return await data.save();
+    return data.save();
   }
 
   async findAll(): Promise<CulturesModel[]> {
-    return await this.model.find().exec();
+    return this.model.find().exec();
   }
 
   async findById(id: string): Promise<CulturesModel> {
-    return await this.model.findOne({ _id: id }).exec();
+    return this.model.findOne({ _id: id }).exec();
   }
 
-  async delete(id: String): Promise<CulturesModel> {
-    return await this.model.findByIdAndRemove({ _id: id }).exec();
+  async delete(id: string): Promise<CulturesModel> {
+    return this.model.findByIdAndRemove({ _id: id }).exec();
   }
 
-  async update(id: String, model: CulturesModel): Promise<CulturesModel> {
+  async update(id: string, model: CulturesModel): Promise<CulturesModel> {
     const cultureUpdate = await this.model.findOne({ _id: id }).exec();
     const { nome, coordenadas, irrigacao } = model;
     if (nome) {
@@ -39,6 +39,6 @@ export class CulturesService {
       cultureUpdate.irrigacao = irrigacao;
     }
 
-    return await cultureUpdate.save();
+    return cultureUpdate.save();
   }
 }

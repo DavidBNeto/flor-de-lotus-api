@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:16
 
 # copy code
 WORKDIR /Flor-de-Lotus

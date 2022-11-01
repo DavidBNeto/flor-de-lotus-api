@@ -1,16 +1,13 @@
-import {
-  Get,
-  Controller,
-  Post,
-  Body,
-  Res,
-  Param,
-  Put,
-  Delete,
-} from '@nestjs/common';
+import {Get,
+        Controller,
+        Post,
+        Body,
+        Res,
+        Param,
+        Put,
+        Delete} from '@nestjs/common';
 import { CulturesService } from './cultures.service';
 import { CulturesModel } from './models/cultures.model';
-import { pseudoRandomBytes } from 'crypto';
 
 @Controller('culture')
 export class CulturesController {
@@ -60,13 +57,11 @@ export class CulturesController {
 
   @Put(':id')
   async update(
-    @Param('id') id: String,
+    @Param('id') id: string,
     @Res() res,
     @Body() body,
   ): Promise<CulturesModel> {
-    const model: CulturesModel = body;
     try {
-      const cultures = await this.service.update(id, model);
       return res.status(200).json({ message: 'Alterado com sucesso!' });
     } catch (error) {
       return res.status(400).json({
@@ -77,9 +72,8 @@ export class CulturesController {
   }
 
   @Delete(':id')
-  async delete(@Param('id') id: String, @Res() res): Promise<CulturesModel> {
+  async delete(@Param('id') id: string, @Res() res): Promise<CulturesModel> {
     try {
-      const cultures = await this.service.delete(id);
       return res.status(200).json({ message: 'Removido com sucesso!' });
     } catch (error) {
       return res
