@@ -1,8 +1,8 @@
 export class Plantmodel{
     constructor(
-        public plant: String,
-        public water_amt: Number,
-        public agrotoxic_amt: Number,
+        public plant: string,
+        public water_amt: number,
+        public agrotoxic_amt: number,
         public water_time: Date,
         public agrotoxic_time: Date
     ) {}

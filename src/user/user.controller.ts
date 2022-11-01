@@ -1,4 +1,4 @@
-import { Get, Controller, Post, Body, Res, Param, Put } from '@nestjs/common';
+import {Get, Controller, Post, Body, Res, Param, Put, Delete} from '@nestjs/common';
 import { UserService } from './user.service';
 import { UserModel } from './models/user.model';
 import { typesRole } from './schemas/user.schema';
@@ -7,15 +7,27 @@ import { typesRole } from './schemas/user.schema';
 export class UserController {
   constructor(private readonly service: UserService) {}
 
+  @Delete()
+  async delete(userId: string, @Res() res): Promise<UserModel> {
+    try {
+      const user = await this.service.deleteById(userId);
+      return res.status(200).json(user);
+    } catch (error) {
+      return res
+          .status(400)
+          .json({ message: 'Ops! Ocorreu um erro ao deletar o usuário', error });
+    }
+  }
+
   @Post()
   async create(@Body() body, @Res() res) {
     const model: UserModel = body.user;
     try {
-      
+
       if (!model) {
         return res.status(400).json({ message: 'Usuário inválido!' });
       }
-      
+
       const { access_lvl, pin } = model;
 
       if (access_lvl && typesRole.indexOf(access_lvl) < 0) {
@@ -50,6 +62,18 @@ export class UserController {
       return res
         .status(400)
         .json({ message: 'Ops! Ocorreu um erro ao buscar os usuários', error });
+    }
+  }
+
+  @Get()
+  async find(userId: string, @Res() res): Promise<UserModel[]> {
+    try {
+      const user = await this.service.findById(userId);
+      return res.status(200).json(user);
+    } catch (error) {
+      return res
+        .status(400)
+        .json({ message: 'Ops! Ocorreu um erro ao buscar o usuário', error });
     }
   }
 }

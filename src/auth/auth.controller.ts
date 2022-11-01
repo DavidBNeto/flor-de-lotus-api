@@ -1,5 +1,4 @@
-import { Controller, Request, Post, UseGuards, Body, Res } from '@nestjs/common';
-import { AuthGuard } from '@nestjs/passport';
+import { Controller, Post, Body, Res } from '@nestjs/common';
 import { AuthService } from './auth.service';
 
 @Controller('auth')
@@ -10,10 +9,6 @@ export class AuthController {
   async login(@Body() body, @Res() res) {
     try {
       const { user } = body;
-
-      // if (!user.id) {
-      //   return res.status(400).json({ message: 'Informe o ID!' });
-      // }
 
       if (!user.pin) {
         return res.status(400).json({ message: 'Informe o PIN!' });

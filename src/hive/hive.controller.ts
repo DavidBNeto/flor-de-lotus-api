@@ -25,7 +25,7 @@ export class HiveController {
   }
 
   @Put(':id')
-  async update(@Param('id') id: Number, @Body() body, @Res() res) {
+  async update(@Param('id') id: number, @Body() body, @Res() res) {
     const model: HiveModel = body;
     try {
       if (!model) {

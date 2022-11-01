@@ -25,19 +25,3 @@ export const CulturesSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
-
-// import * as mongoose from 'mongoose';
-// const Schema = mongoose.Schema;
-
-// const CulturesSchema = new Schema({
-//     plant: {
-//         type: mongoose.Schema.Types.ObjectId,
-//         ref: "Plants"
-//         },
-//     coordinates: [
-//         {x: { type: Number }},
-//         {y: { type: Number }}
-//     ]
-// });
-
-// export const Cultures = mongoose.model("Cultures", CulturesSchema);

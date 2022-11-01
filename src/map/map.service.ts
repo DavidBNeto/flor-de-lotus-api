@@ -9,14 +9,14 @@ export class MapService {
 
   async create(model: MapModel): Promise<MapModel> {
     const data = new this.model(model);
-    return await data.save();
+    return data.save();
   }
 
   async findAll(): Promise<MapModel[]> {
-    return await this.model.find().exec();
+    return this.model.find().exec();
   }
 
   async findById(id: string): Promise<MapModel> {
-    return await this.model.findOne({ _id: id }).exec();
+    return this.model.findOne({ _id: id }).exec();
   }
 }

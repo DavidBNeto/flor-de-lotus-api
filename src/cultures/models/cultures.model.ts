@@ -5,7 +5,7 @@ export class CulturesModel {
     public coordenadas: [],
     public irrigacao: [
       {
-        agua: Number;
+        agua: number;
         hora: Date;
       }
     ],

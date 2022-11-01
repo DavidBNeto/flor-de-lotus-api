@@ -43,8 +43,6 @@ export class Seeder {
         this.logger.error(`Failed seeding user: ${error.message}`);
       }
     }
-
-    return;
   }
 
   async hives() {
@@ -63,7 +61,5 @@ export class Seeder {
         this.logger.error(`Failed seeding hive: ${error.message}`);
       }
     }
-
-    return;
   }
 }

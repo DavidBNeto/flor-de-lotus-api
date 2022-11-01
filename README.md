@@ -1,18 +1,20 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-  <img src="https://raw.githubusercontent.com/khaosdoctor/blog-assets/master/images/2022/06/10b88c68-typescript-logo.png" width="320" alt="Ts logo" />
-  <img src="https://www.mundojs.com.br/wp-content/uploads/2020/02/prettier.png" width="320" alt="prettier logo" />
-  <img src="https://img.mandic.com.br/blog/2015/01/homepage-docker-logo.png" width="320" alt="docker logo" />
-  <img src="https://www.ambientelivre.com.br/media/k2/items/cache/e9432fccf28a953514f077b86e5e657a_L.jpg" width="320" alt="mongo logo" />
-  <img src="https://miro.medium.com/max/1400/1*EiKXXsymsyfZ5X46uFG3Xw.png" width="320" alt="npm logo" />
+  <a href="http://nestjs.com/" target="blank"><img src="./assets/nestjs_logo.png" width="320" alt="Nest Logo" /></a>
+  <img src="./assets/typescript-logo.png" width="285" alt="Ts logo" />
+  <img src="./assets/prettier_logo.png" width="320" alt="prettier logo" />  
+  <img src="./assets/mongodb_logo.jpg" width="285" alt="mongo logo" />
+  <img src="./assets/node_npm%20_logo.png" width="600" alt="npm logo" />
+</p>
+<p align="center">
+<img src="./assets/homepage-docker-logo.png" width="320" alt="docker logo" />
 </p>
 
 [travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
 [travis-url]: https://travis-ci.org/nestjs/nest
 [linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
 [linux-url]: https://travis-ci.org/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
+
+  <p align="center">Uma estrutura progressiva do <a href="http://nodejs.org" target="blank">Node.js</a>  para criar aplicativos do lado do servidor eficientes e escaláveis, fortemente inspirados no <a href="https://angular.io" target="blank">Angular</a>.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
@@ -29,17 +31,27 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Descrição
+A estrutura deste programa pode ser vista na imagem abaixo.
+<p align="center">
+  <img src="./assets/arquitetura.jpg" alt="arquitetura" />
+</p>
+Imagem desenvolvida por <a href="mailto:miguelzanela89@gmail.com?">Miguel Zanela</a>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+## Pré-requisito
+- [Node.js versão 16.17.0](https://nodejs.org/en/)
+- [Typescript] "3.4.5" ou maior (https://www.typescriptlang.org)
+- [NestJS] "6.0" ou maior (https://nestjs.com)
+- [MongoDB] "3.2.7" ou maior (https://www.mongodb.com)
+
+## Instalação
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+## Rodando o Aplicativo
 
 ```bash
 # development
@@ -52,29 +64,36 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Sonarqube
+Para realizar uma varredura no código, a ferramenta do solarqube pode ser utilizada, para isso você pode executar os seguintes passos:
+
+Baixar e instalar uma versão do Sonarqube deste [link](https://docs.sonarqube.org/latest/setup/get-started-2-minutes/)
+
+Após isso, seguir os passos disponíveis no guia da própria Sonarqube.
+
+## Testes
 
 ```bash
-# unit tests
+# testes unitários
 $ npm run test
 
-# e2e tests
+# testes e2e 
 $ npm run test:e2e
 
-# test coverage
+# cobertura de teste
 $ npm run test:cov
 ```
 
-## Support
+## Suporte
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Nest é um projeto de código aberto licenciado pelo MIT. Pode crescer graças aos patrocinadores e suporte dos incríveis apoiadores. Se você gostaria de entrar no time, por favor [leia mais aqui](https://docs.nestjs.com/support).
 
-## Stay in touch
+## Contatos
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
+- Autor - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Página da Web - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
 
-## License
+## Licença
 
-  Nest is [MIT licensed](LICENSE).
+  Nest é [licenciado pelo MIT](LICENSE).

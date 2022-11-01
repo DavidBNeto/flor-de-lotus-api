@@ -9,11 +9,11 @@ export class HiveService {
 
   async create(model: HiveModel): Promise<HiveModel> {
     const data = new this.model(model);
-    return await data.save();
+    return data.save();
   }
-  async update(id: Number, model: HiveModel): Promise<HiveModel> {
+  async update(id: number, model: HiveModel): Promise<HiveModel> {
     const hiveUpdate = await this.model.findOne({ _id: id }).exec();
-    const { x, y, ip } = model;
+    const { x, y, ip, status } = model;
     if (x) {
       hiveUpdate.x = x;
     }
@@ -23,14 +23,17 @@ export class HiveService {
     if (ip) {
       hiveUpdate.ip = ip;
     }
+    if (status) {
+      hiveUpdate.status = status;
+    }
 
-    return await hiveUpdate.save();
+    return hiveUpdate.save();
   }
   async findAll(): Promise<HiveModel[]> {
-    return await this.model.find().exec();
+    return this.model.find().exec();
   }
 
   async findById(id: string): Promise<HiveModel> {
-    return await this.model.findOne({ _id: id }).exec();
+    return this.model.findOne({ _id: id }).exec();
   }
 }
